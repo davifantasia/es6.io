@@ -30,7 +30,13 @@
   <h2 class="jump">SPREADS!</h2>
 
 <script>
-  
+  const jumpH2 = document.querySelector('.jump');
+  const JumpH2Text = jumpH2.textContent;
+  const jumpH2TextArray = [...JumpH2Text];
+  const jumpH2TextArrayNew = jumpH2TextArray.map((letter) => `<span>${letter}</span>`);
+  const jumpH2TextNew = jumpH2TextArrayNew.reduce((word, currentLetter) => `${word}${currentLetter}`);
+
+  jumpH2.innerHTML = jumpH2TextNew;
 </script>
 </body>
 </html>
